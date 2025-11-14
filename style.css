@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    color: #333;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FF6B6B;
+}
+
+/* Categories */
+.categories {
+    padding: 60px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.view-all {
+    color: #FF6B6B;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 15px 30px;
+    background: #E7FAFE;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.view-all:hover {
+    background: #d0f4fc;
+    transform: translateY(-2px);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    background: #F5F5F5;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.category-icon {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.category-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.category-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Recipes Section */
+.recipes {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.recipes-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.recipes-header h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.recipes-header p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.recipe-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    background: #fff;
+}
+
+.recipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.recipe-image {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.recipe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.recipe-content {
+    padding: 25px;
+    background: #fff;
+}
+
+.recipe-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+    min-height: 60px;
+}
+
+.recipe-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.recipe-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Promo Card */
+.promo-card {
+    background: linear-gradient(135deg, #2d6a5c 0%, #3a8370 100%);
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+
+.promo-card h3 {
+    font-size: 28px;
+    font-style: italic;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.promo-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.promo-url {
+    font-size: 14px;
+    background: white;
+    color: #333;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Newsletter */
+.newsletter {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #e8f5f1 0%, #f0f9f6 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.decoration-left {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: auto;
+    opacity: 0.7;
+}
+
+.decoration-right {
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: auto;
+    opacity: 0.7;
+}
+
+.newsletter h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.newsletter p {
+    color: #666;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.subscribe-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 18px 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+.subscribe-form button {
+    padding: 18px 40px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.subscribe-form button:hover {
+    background: #FF6B6B;
+}
+
+/* Footer */
+footer {
+    padding: 60px 0 30px;
+    background: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.footer-desc {
+    color: #666;
+    max-width: 300px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FF6B6B;
+}
+
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
